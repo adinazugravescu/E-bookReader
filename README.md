@@ -3,7 +3,7 @@
 ![Diagrama bloc](/Images/E-Reader.png)
 
 
-## 🔩 Bill of Materials (BOM)
+##  Bill of Materials (BOM)
 
 | Componenta/Modul                          | Link achiziție                                                                                                                                                                                                                                                                                       | Datasheet                                                                                                                                                             |
 |-------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -46,7 +46,7 @@
 | DS3231SN#                                 | [Buy](https://ro.mouser.com/ProductDetail/Analog-Devices-Maxim-Integrated/DS3231SN?qs=1eQvB6Dk1vhUlr8%2FOrV0Fw%3D%3D)                                                                                                                                                                                | [Datasheet](https://ro.mouser.com/datasheet/2/609/DS3231-3421123.pdf)                                                                                                 |
 | MAX17048G+T10                             | [Buy](https://ro.mouser.com/ProductDetail/Analog-Devices-Maxim-Integrated/MAX17048G%2bT10?qs=D7PJwyCwLAoGnnn8jEPRBQ%3D%3D)                                                                                                                                                                           | [Datasheet](https://ro.mouser.com/datasheet/2/609/MAX17048_MAX17049-3469099.pdf)                                                                                      |
 
-## ⚙️ Descriere functionalitate hardware
+##  Descriere functionalitate hardware
 
 Proiectul este bazat pe un microcontroller **ESP32-C6-WROOM-1-N8**, alimentat printr-un LDO 3V3 dintr-o baterie Li-Po(1800 mAh). Alimentarea este gestionata de un circuit de incarcare **MCP73831** conectat la USB-C. ESP32-C6-WROOM-1-N8 controleaza toate componentele externe prin interfete standard SPI, I2C si GPIO:
 
@@ -62,7 +62,7 @@ Proiectul este bazat pe un microcontroller **ESP32-C6-WROOM-1-N8**, alimentat pr
 Comunicarea cu display-ul si stocarea se face prin interfete rapide SPI. Toate componentele I2C partajeaza linia SDA si SCL, pentru a minimiza utilizarea pinilor.
 
 
-## 📍 Utilizarea pinilor ESP32-C6
+##  Utilizarea pinilor ESP32-C6
 
 | Componenta         | Pin ESP32-C6 | Functie     | Justificare                                                  |
 |--------------------|--------------|-------------|--------------------------------------------------------------|
@@ -121,7 +121,7 @@ Comunicarea cu display-ul si stocarea se face prin interfete rapide SPI. Toate c
 7. **Constructia componentelor externe**  
    Am construit modelul 3D al bateriei si al display-ului conform dimensiunilor si detaliilor din datasheet-urile oferite.
 
-### 🛠️ Probleme intampinate
+###  Probleme intampinate
 
 - Gasirea unui model 3D compatibil cu footprint-ul butonului a fost dificila, asa ca am modificat manual un model descarcat.
 - In schematic, anumite warning-uri au fost acceptate deoarece erau implicite in structura designului cerut.
