@@ -45,7 +45,8 @@
 | ESP32-C6-WROOM-1-N8                       | [Buy](https://ro.mouser.com/ProductDetail/Espressif-Systems/ESP32-C6-WROOM-1-N8?qs=8Wlm6%252BaMh8ST02Gmwp74cw%3D%3D)                                                                                                                                                                                 | [Datasheet](https://ro.mouser.com/datasheet/2/891/Espressif_ESP32_C6_WROOM_1__Datasheet_V0_1_PRELIMI-3239987.pdf)                                                     |
 | DS3231SN#                                 | [Buy](https://ro.mouser.com/ProductDetail/Analog-Devices-Maxim-Integrated/DS3231SN?qs=1eQvB6Dk1vhUlr8%2FOrV0Fw%3D%3D)                                                                                                                                                                                | [Datasheet](https://ro.mouser.com/datasheet/2/609/DS3231-3421123.pdf)                                                                                                 |
 | MAX17048G+T10                             | [Buy](https://ro.mouser.com/ProductDetail/Analog-Devices-Maxim-Integrated/MAX17048G%2bT10?qs=D7PJwyCwLAoGnnn8jEPRBQ%3D%3D)                                                                                                                                                                           | [Datasheet](https://ro.mouser.com/datasheet/2/609/MAX17048_MAX17049-3469099.pdf)                                                                                      |
-
+| Solder Jumper                             | [Buy](https://ro.mouser.com/ProductDetail/Vishay-Dale/CRCW04020000Z0EEHP?qs=sGAEpiMZZMtlubZbdhIBIKF%2FTFcY2hSpgvMg4uB1QYw%3D)                                                                                                                                                                        | [Datasheet](https://www.vishay.com/docs/20043/crcwhpe3.pdf)                                                                                                           |
+| Test Pad                                  | [Buy](https://www.digikey.com/en/products/detail/keystone-electronics/5006/255330)                                                                                                                                                                                                                   | [Datasheet](https://www.keyelco.com/userAssets/file/M65p56.pdf)                                                                                                       |
 ##  Descriere functionalitate hardware
 
 Proiectul este bazat pe un microcontroller **ESP32-C6-WROOM-1-N8**, alimentat printr-un LDO 3V3 dintr-o baterie Li-Po(1800 mAh). Alimentarea este gestionata de un circuit de incarcare **MCP73831** conectat la USB-C. ESP32-C6-WROOM-1-N8 controleaza toate componentele externe prin interfete standard SPI, I2C si GPIO:
@@ -61,6 +62,19 @@ Proiectul este bazat pe un microcontroller **ESP32-C6-WROOM-1-N8**, alimentat pr
 
 Comunicarea cu display-ul si stocarea se face prin interfete rapide SPI. Toate componentele I2C partajeaza linia SDA si SCL, pentru a minimiza utilizarea pinilor.
 
+**Specificatii electronice componente principale**
+
+   - Microcontroller – ESP32-C6-WROOM-1-N8 CPU: 32-bit RISC-V single-core, frecventa maxima 160 MHz. Memorie interna: 320KB ROM, 512KB HP SRAM, 16KB LP SRAM. Conectivitate: Wi-Fi 6 si Bluetooth LE 5.0. Tensiune de operare: 3.3V. Consum de curent: 160–260 mA in mod activ, 3–20 mA in modem-sleep, 0.8 mA in light-sleep, 10 µA in deep-sleep, 2.5 µA in hibernare.
+
+   - Display – E-paper 7.5": Display de tip ePaper, ales pentru consumul extrem de redus si lizibilitatea foarte buna in lumina naturala.
+
+   - Memorie: Stocarea este realizata cu un card MicroSD si un cip NOR Flash de 64MB conectat pe aceeasi magistrala SPI.
+
+   - Senzor ambiental – BME688: Senzor digital care masoara temperatura, umiditatea, presiunea si compozitia gazelor.Tensiune de alimentare: 1.71V – 3.6V. Consum: <1 mA in mod activ, <1 µA in mod sleep.
+
+   - Regulator tensiune – XC6220A331MR-G: LDO pentru conversia tensiunii bateriei la 3.3V. Curent maxim de iesire: 700 mA. Tensiune de cadere: aprox. 250 mV la 500 mA.
+
+   - Circuit incarcare baterie – MCP73831: Controller linear pentru incarcare acumulatori Li-Po. Tensiune intrare: 3.75V – 6V. Curent maxim programabil pana la 500 mA.
 
 ##  Utilizarea pinilor ESP32-C6
 
